@@ -15,6 +15,7 @@ public class Light {
 	 * Constructor creates a new light object.
 	 */
 	public Light() {
+		
 		this(false);
 	}
 	

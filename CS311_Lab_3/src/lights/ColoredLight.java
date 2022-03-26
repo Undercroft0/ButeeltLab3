@@ -8,9 +8,13 @@ public class ColoredLight extends Light{
 	 * Creates a new colored light.
 	 * @param color - color of this light.
 	 */
+	private Color lightcolor;
+	
 	public ColoredLight(Color color) {
-		// TODO
-		throw new RuntimeException("ColoredLight(Color) not yet implemented!");
+		
+		super();
+		lightcolor = color;
+		
 	}
 	
 	/**
@@ -18,16 +22,14 @@ public class ColoredLight extends Light{
 	 * @return color of this light.
 	 */
 	public Color getColor() {
-		// TODO
-		throw new RuntimeException("ColoredLight.getColor() not yet implemented!");
+		return lightcolor;
 	}
 	
 	/**
 	 * Changes the color of this light to be c.
 	 */
 	public void setColor(Color c) {
-		// TODO
-		throw new RuntimeException("ColoredLight.setColor() not yet implemented!");
+		lightcolor = c;
 	}
 	
 	/**
