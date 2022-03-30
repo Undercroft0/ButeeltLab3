@@ -13,7 +13,7 @@ public class ColoredLight extends Light{
 	public ColoredLight(Color color) {
 		
 		super();
-		lightcolor = color;
+		this.lightcolor = color;
 		
 	}
 	
