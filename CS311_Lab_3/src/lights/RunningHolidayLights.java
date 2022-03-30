@@ -12,18 +12,17 @@ public class RunningHolidayLights implements HolidayLights {
 	 * Creates new running holiday lights.
 	 * @param length - length of this set of lights.
 	 */
+	ArrayList<Light> lightList = new ArrayList<Light>();
+	
 	public RunningHolidayLights(int length) {
-		
-		// TODO ArrayList<Light> lightList = new ArrayList<Light>();
+	
 		this.length = length;
-		
+		for(int i = 0; i < length; i++) {
+			lightList.add(i, new ColoredLight(Color.green));	
+		}
 	}
 	
 	public List<Light> next() {
-			new ColoredLight(Color.green);
-			new ColoredLight(Color.red);
-			new ColoredLight(Color.BLUE);
-			ArrayList<Light> lightList = new ArrayList<Light>();
 		// TODO
 		return lightList;
 		
