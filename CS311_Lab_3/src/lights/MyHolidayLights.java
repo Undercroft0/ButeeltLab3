@@ -37,7 +37,7 @@ public class MyHolidayLights implements HolidayLights  {
 			count++;
 		}
 		
-		if(count > 300) {
+		if(count > 150) {
 			mode = 1;
 		count = 0;
 		for(int i = 0; i < length; i++) {
@@ -61,16 +61,43 @@ ColoredLight cl1 = (ColoredLight) lightList.get(i);
 		
 		if(i < length/2) {
 		i = i + 1;
+		count++;
 		}
 		
 		if(count > length/2) {
-			mode = 0;
+			mode = 2;
 			count = 0;
 		}
 		break;
 		
+		case 2:
+
+			for(int i = 0; i < length; i++) {
+				ColoredLight cl4 = (ColoredLight) lightList.get(i);
+				cl4.setOn(true);
+				count++;
+			}
+
+		if(count > 2) {
+			mode = 3;
+			count = 0;
 		}
+		break;
 		
+		case 3: 
+			for(int i = 0; i < length; i++) {
+				ColoredLight cl4 = (ColoredLight) lightList.get(i);
+				cl4.setOn(false);
+				count++;
+			}
+			
+			if(count > 2) {
+				mode = 2;
+				count = 0;
+			}
+			
+			break;
+		}
 		return lightList;
 	}
 

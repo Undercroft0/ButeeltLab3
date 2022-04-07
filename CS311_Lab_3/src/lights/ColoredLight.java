@@ -6,7 +6,7 @@ import java.util.Random;
 public class ColoredLight extends Light{
 	
 	/**
-	 * Creates a new colored light.
+	 * Creates a new colored light	.
 	 * @param color - color of this light.
 	 */
 	private Color lightcolor;
@@ -39,7 +39,7 @@ public class ColoredLight extends Light{
 	 */
 	@Override
 	public void randomChange() {
-		// TODO. 
+		
 		super.randomChange();
 		
 		int red = rnd.nextInt(256);
