@@ -42,7 +42,7 @@ public class MyHolidayLights implements HolidayLights  {
 		count = 0;
 		for(int i = 0; i < length; i++) {
 			
-ColoredLight cl1 = (ColoredLight) lightList.get(i);
+			ColoredLight cl1 = (ColoredLight) lightList.get(i);
 		
 		cl1.setOn(false);
 		}

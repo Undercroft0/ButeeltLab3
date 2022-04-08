@@ -23,7 +23,7 @@ public class RunningHolidayLights implements HolidayLights {
 	}
 	
 	public List<Light> next() {
-		// TODO
+		
 		return lightList;
 		
 	}
@@ -33,7 +33,7 @@ public class RunningHolidayLights implements HolidayLights {
 	 * @return length of this
 	 */
 	public int getLength() {
-		// TODO
+		
 		return length;
 	}
 						
