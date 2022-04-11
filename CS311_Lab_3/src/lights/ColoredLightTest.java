@@ -13,13 +13,13 @@ public class ColoredLightTest {
 	@Test
 	public void getColorTest() {
 		ColoredLight cl = new ColoredLight(Color.green);
-		assertEquals(Color.green, cl.getColor());
+		Assert.assertEquals(Color.green, cl.getColor());
 	}
 	@Test
 	public void setColorTest() {
 		ColoredLight cl = new ColoredLight(null);
 		cl.setColor(Color.red);
-		assertTrue(cl.getColor() == Color.red);
+		Assert.assertTrue(cl.getColor() == Color.red);
 	}
 	
 	@Test

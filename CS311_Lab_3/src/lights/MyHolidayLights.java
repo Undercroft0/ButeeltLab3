@@ -78,7 +78,7 @@ public class MyHolidayLights implements HolidayLights  {
 				count++;
 			}
 
-		if(count > 2) {
+		if(count > 150) {
 			mode = 3;
 			count = 0;
 		}
