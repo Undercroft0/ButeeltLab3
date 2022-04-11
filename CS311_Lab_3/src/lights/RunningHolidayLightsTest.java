@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -24,16 +25,19 @@ public class RunningHolidayLightsTest {
 
 	@Test
 	public void testNext() {
-		int count = 0;
-		ArrayList<Light> lightList = new ArrayList<Light>();
-		RunningHolidayLights t = new RunningHolidayLights(5);
-		for(int i = 0; i < t.getLength(); i++) {
-			ColoredLight cl1 = (ColoredLight) lightList.get(i);
-			cl1.randomChange();
-			count ++;
-		}
-		
-		assertTrue(count == 4);
+		int len = 12;
+			RunningHolidayLights list = new RunningHolidayLights(len);
+			List<Light> li;
+			li = list.next();
+			
+			for (int i = 0; i < len; i++) {
+				li.get(i).setOn(true);
+				assertTrue(li.get(i).isOn());
+			}
+			for (int i = 0; i < len; i++) {
+				li.get(i).setOn(false);
+				assertFalse(li.get(i).isOn());
+			}
 	}
 
 	@Test
@@ -44,3 +48,6 @@ public class RunningHolidayLightsTest {
 	}
 
 }
+
+
+

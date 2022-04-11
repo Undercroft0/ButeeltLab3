@@ -3,6 +3,7 @@ package lights;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -23,9 +24,21 @@ public class MyHolidayLightsTest {
 
 	@Test
 	public void testNext() {
-		fail("Not yet implemented");
-	}
-
+		int len = 12;
+		MyHolidayLights list = new MyHolidayLights(len);
+		List<Light> li;
+		li = list.next();
+		
+		for (int i = 0; i < len; i++) {
+			li.get(i).setOn(true);
+			assertTrue(li.get(i).isOn());
+		}
+		for (int i = 0; i < len; i++) {
+			li.get(i).setOn(false);
+			assertFalse(li.get(i).isOn());
+		}
+}
+	
 	@Test
 	public void testGetLength() {
 		MyHolidayLights t = new MyHolidayLights(10);
