@@ -15,11 +15,26 @@ public class ColoredLightTest {
 		ColoredLight cl = new ColoredLight(Color.green);
 		Assert.assertEquals(Color.green, cl.getColor());
 	}
+	
+	@Test
+	public void NoGetColorTest() {
+		ColoredLight cl = new ColoredLight(Color.green);
+		Assert.assertNotEquals(Color.red, cl.getColor());
+	}
+	
+	
 	@Test
 	public void setColorTest() {
 		ColoredLight cl = new ColoredLight(null);
 		cl.setColor(Color.red);
 		Assert.assertTrue(cl.getColor() == Color.red);
+	}
+	
+	@Test
+	public void NoSetColorTest() {
+		ColoredLight cl = new ColoredLight(null);
+		cl.setColor(Color.red);
+		Assert.assertTrue(cl.getColor() != Color.green);
 	}
 	
 	@Test

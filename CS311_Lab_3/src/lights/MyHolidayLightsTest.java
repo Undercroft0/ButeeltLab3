@@ -45,5 +45,12 @@ public class MyHolidayLightsTest {
 		
 		assertTrue(10 == t.getLength());
 	}
+	@Test
+	public void testNotLength () {
+		
+		MyHolidayLights t = new MyHolidayLights(11);
+		
+		assertNotEquals(12, t.getLength());
+	  }
 
 }

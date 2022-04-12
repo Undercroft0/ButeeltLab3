@@ -42,12 +42,20 @@ public class RunningHolidayLightsTest {
 
 	@Test
 	public void testGetLength() {
-		RunningHolidayLights t = new RunningHolidayLights(10);
+		int len = 10;
 		
-		assertTrue(10 == t.getLength());
+		RunningHolidayLights t = new RunningHolidayLights(len);
+		
+		assertTrue(len == t.getLength());
+	}
+	
+	@Test
+	public void testNotLength () {
+		
+		RunningHolidayLights t = new RunningHolidayLights(11);
+		
+		assertNotEquals(12, t.getLength());
 	}
 
 }
-
-
 
