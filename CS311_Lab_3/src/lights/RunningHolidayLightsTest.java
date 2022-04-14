@@ -22,6 +22,7 @@ public class RunningHolidayLightsTest {
 		
 		assertTrue(lightList.size() == t.getLength());
 	}
+	
 
 	@Test
 	public void testNext() {
@@ -47,6 +48,16 @@ public class RunningHolidayLightsTest {
 		RunningHolidayLights t = new RunningHolidayLights(len);
 		
 		assertTrue(len == t.getLength());
+	}
+	
+	@Test 
+	public void testRunningHolidaysLightsOff()
+	{
+		RunningHolidayLights rLight = new RunningHolidayLights(5);
+		for(Light llight : rLight.next())
+		{
+			assertFalse(llight.isOn());			
+		}
 	}
 	
 	@Test

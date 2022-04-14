@@ -34,6 +34,7 @@ public class ColoredLight extends Light{
 		lightcolor = c;
 	}
 	
+	
 	/**
 	 * Randomly changes this light to be on or off and its color.
 	 */

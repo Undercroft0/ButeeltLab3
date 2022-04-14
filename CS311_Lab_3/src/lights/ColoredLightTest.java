@@ -31,10 +31,23 @@ public class ColoredLightTest {
 	}
 	
 	@Test
-	public void NoSetColorTest() {
-		ColoredLight cl = new ColoredLight(null);
-		cl.setColor(Color.red);
-		Assert.assertTrue(cl.getColor() != Color.green);
+	public void TurnOnOnlyOneLight()
+	{
+		ColoredLight firstLight = new ColoredLight(Color.red);
+		ColoredLight secondLight = new ColoredLight(Color.blue);
+		
+		firstLight.setOn(true);
+		
+		Assert.assertTrue(firstLight.isOn());
+		Assert.assertFalse(secondLight.isOn());
+	}
+	
+	@Test public void TurnOffColoredLightTest()
+	{
+		ColoredLight Light = new ColoredLight(Color.red);
+		Light.setOn(false);
+		
+		Assert.assertFalse(Light.isOn());
 	}
 	
 	@Test
